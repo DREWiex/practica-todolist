@@ -1,6 +1,6 @@
 import { Table } from "./Table";
 
-export const Tareas = ({ tareas }) => {
+export const Tareas = ({ tasks }) => {
 
   return (
 
@@ -14,8 +14,8 @@ export const Tareas = ({ tareas }) => {
 
             {
 
-              tareas.map(tarea => (
-                <Table {...tarea} key={tarea.id}/>
+              tasks.map(task => (
+                <Table {...task} key={task.id} />
               ))
 
             }

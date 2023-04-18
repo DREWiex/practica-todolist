@@ -1,25 +1,40 @@
+import { useEffect, useReducer } from "react";
 import { Form } from "./Form";
 import { Tareas } from "./Tareas";
+import { reducerTask } from '../reducers/taskReducer';
+import { setLocal, getLocal } from '../helpers/localStorage';
 
 export const ToDoList = () => {
 
-  const newTodo = [
-    {
-      id: Date.now(),
-      newTask: 'Título de la tarea',
-      description: 'Descripción de la tarea',
-      done: false,
-      date: new Date()
-    }
-  ];
+  const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
+
+  const onNewTask = (newTask) => {
+
+    const action = {
+
+      type: '[TASK] add task',
+      payload: newTask
+
+    };
+
+    dispatch(action);
+
+  };
+
+  useEffect(() => {
+
+    setLocal(tasks);
+
+  }, [tasks]);
+
 
   return (
 
     <>
 
-      <Form />
+      <Form onNewTask={onNewTask} />
 
-      <Tareas tareas={newTodo}/>
+      <Tareas tasks={tasks} />
 
     </>
 
