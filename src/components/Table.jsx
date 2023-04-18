@@ -1,7 +1,8 @@
+import { useTodoList } from "../hooks/useToDoList";
 
 export const Table = ({ id, newTask, description, done }) => {
 
-
+    const { handleToggleTask } = useTodoList('');
 
     return (
 
@@ -11,7 +12,7 @@ export const Table = ({ id, newTask, description, done }) => {
                 <strong>{newTask}</strong>
                 -
                 {description}
-                <button> 
+                <button onClick={handleToggleTask}> 
                     {!done && 'Pendiente' || done && 'Finalizada'}
                 </button>
                 <button id={id}>Eliminar</button>
