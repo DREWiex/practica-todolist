@@ -1,8 +1,6 @@
 import { Table } from "./Table";
 
-export const Tareas = () => {
-
-
+export const Tareas = ({ tareas }) => {
 
   return (
 
@@ -14,7 +12,13 @@ export const Tareas = () => {
         <tbody>
           <tr>
 
-            <Table />
+            {
+
+              tareas.map(tarea => (
+                <Table {...tarea} key={tarea.id}/>
+              ))
+
+            }
 
           </tr>
         </tbody>

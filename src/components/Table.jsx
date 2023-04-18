@@ -1,5 +1,5 @@
 
-export const Table = ({ newTask = 'Título', description = 'Descripción', done = false, id = 1 }) => {
+export const Table = ({ id, newTask, description, done }) => {
 
 
 
