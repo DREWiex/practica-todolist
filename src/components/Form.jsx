@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useForm } from "../hooks/useForm";
 
 export const Form = ({ onNewTask }) => {
@@ -20,7 +19,7 @@ export const Form = ({ onNewTask }) => {
         onNewTask(newTask);
 
     };
-    
+
 
     return (
         <>

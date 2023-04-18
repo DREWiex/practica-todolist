@@ -21,7 +21,6 @@ export const ToDoList = () => {
 
   };
 
-
   useEffect(() => {
 
     setLocal(tasks);
