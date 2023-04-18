@@ -7,7 +7,15 @@ export const Form = () => {
     const handleSubmit=(ev)=>{
         ev.preventDefault()
 
-        const data=serialiceForm(ev.target)
+        const newTodo = {
+            id: Date.now(),
+            todo: 'Titulo de la tarea',
+            description: '',
+            done: false,
+            date: new Date()
+        }
+
+        // const data=serialiceForm(ev.target)
 
         setForm(data)
 
@@ -27,13 +35,15 @@ export const Form = () => {
             id="newTask"
             name="newTask"
             placeholder="Task"
+            onChange={handleChange}
             />
 
             <textarea
             name="description"
             id="description"
             cols="50"
-            rows="10">          
+            rows="10"
+            onChange={handleChange}>          
             </textarea>
 
             <button

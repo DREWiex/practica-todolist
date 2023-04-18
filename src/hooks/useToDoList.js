@@ -1,8 +1,19 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 export const useTodoList = () => {
 
-  const [todos, dispatch] = useReducer(todoReducer, [], init);
+  const [todos, dispatch] = useReducer(taskReducer, [], init);
+  const [tasks, setTasks] = useState('')
+
+  const getLocal = () => {
+    console.log('Getting from lLocal Storage')
+    return JSON.parse(localStorage.getItem('Tasks Storage')) || [];
+  }
+  
+  const setLocal = () => {
+    console.log('Setting Local Storage')
+    localStorage.setItem('Tasks Storage', JSON.stringify(arrayTasks));
+  }
 
 
   const handleNewTodo = (newTodo) => {
@@ -22,6 +33,8 @@ export const useTodoList = () => {
       todos,
       handleDeleteTodo,
       handleNewTodo,
-      handleToggleTodo
+      handleToggleTodo,
+      setLocal,
+      getLocal
   }
 }
