@@ -22,10 +22,18 @@ export const useTodoList = () => {
 
 
   const handleDeleteTask = (id) => {
-    
 
 
-  };
+    const action = {
+
+      type: '[TASK] delete task',
+      payload: id
+
+    }
+
+    dispatch(action)
+
+  }
 
 
   const handleToggleTask = (id) => {

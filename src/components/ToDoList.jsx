@@ -19,7 +19,7 @@ export const ToDoList = () => {
 
     <>
 
-      <Form handleNewTask={handleNewTask} />
+      <Form handleNewTask={handleNewTask}/>
 
       <Tareas tasks={tasks} />
 

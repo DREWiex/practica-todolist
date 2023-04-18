@@ -1,8 +1,18 @@
 import { useTodoList } from "../hooks/useToDoList";
+import {setLocal} from "../helpers/localStorage"
 
 export const Table = ({ id, newTask, description, done }) => {
 
-    const { handleToggleTask } = useTodoList();
+    const { handleToggleTask, handleDeleteTask } = useTodoList();
+
+    
+
+    const deletingTask = () => {
+
+        console.log(id)
+        handleDeleteTask(id);
+        // setLocal();
+      }
 
     return (
 
@@ -15,7 +25,7 @@ export const Table = ({ id, newTask, description, done }) => {
                 <button onClick={handleToggleTask}> 
                     {!done && 'Pendiente' || done && 'Finalizada'}
                 </button>
-                <button id={id}>Eliminar</button>
+                <button onClick={deletingTask}>Eliminar</button>
             </td>
 
         </>
