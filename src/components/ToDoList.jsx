@@ -1,25 +1,12 @@
-import { useEffect, useReducer } from "react";
+import { useEffect } from "react";
 import { Form } from "./Form";
 import { Tareas } from "./Tareas";
-import { reducerTask } from '../reducers/taskReducer';
-import { setLocal, getLocal } from '../helpers/localStorage';
+import { setLocal } from '../helpers/localStorage';
+import { useTodoList } from "../hooks/useToDoList";
 
 export const ToDoList = () => {
 
-  const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
-
-  const onNewTask = (newTask) => {
-
-    const action = {
-
-      type: '[TASK] add task',
-      payload: newTask
-
-    };
-
-    dispatch(action);
-
-  };
+  const { tasks, handleNewTask } = useTodoList();
 
   useEffect(() => {
 
@@ -32,7 +19,7 @@ export const ToDoList = () => {
 
     <>
 
-      <Form onNewTask={onNewTask} />
+      <Form handleNewTask={handleNewTask} />
 
       <Tareas tasks={tasks} />
 
