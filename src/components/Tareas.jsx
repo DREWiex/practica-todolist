@@ -1,6 +1,9 @@
 import { Table } from "./Table";
+import { getLocal } from "../helpers/localStorage";
 
-export const Tareas = ({ tareas }) => {
+export const Tareas = ({ tasks }) => {
+
+  console.log(getLocal());
 
   return (
 
@@ -14,8 +17,8 @@ export const Tareas = ({ tareas }) => {
 
             {
 
-              tareas.map(tarea => (
-                <Table {...tarea} key={tarea.id}/>
+              tasks.map(task => (
+                <Table {...task} key={task.id} />
               ))
 
             }

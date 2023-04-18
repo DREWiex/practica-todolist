@@ -3,7 +3,6 @@ export const reducerTask = (state = [], action) => {
 
     switch (action.type) {
         case '[TASK] add task':
-            console.log('Add task');
             return [...state, action.payload];
 
         case '[TASK] delete task':

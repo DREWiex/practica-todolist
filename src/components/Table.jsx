@@ -11,7 +11,7 @@ export const Table = ({ id, newTask, description, done }) => {
                 <strong>{newTask}</strong>
                 -
                 {description}
-                <button>
+                <button> 
                     {!done && 'Pendiente' || done && 'Finalizada'}
                 </button>
                 <button id={id}>Eliminar</button>
@@ -22,3 +22,5 @@ export const Table = ({ id, newTask, description, done }) => {
     );
 
 };
+
+//! falta evento onClick en button
