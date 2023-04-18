@@ -1,3 +1,4 @@
+import { Tareas } from "./Tareas";
 
 export const ToDoList = () => {
 
@@ -8,6 +9,8 @@ export const ToDoList = () => {
     <>
     
 
+
+      <Tareas />
 
     </>
 
