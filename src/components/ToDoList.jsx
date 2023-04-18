@@ -1,3 +1,4 @@
+import { Form } from "./Form";
 import { Tareas } from "./Tareas";
 
 export const ToDoList = () => {
@@ -16,7 +17,7 @@ export const ToDoList = () => {
 
     <>
 
-
+      <Form />
 
       <Tareas tareas={newTodo}/>
 
