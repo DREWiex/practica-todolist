@@ -14,6 +14,7 @@ function App() {
       </header>
 
       <main>
+        <h1>Lista de Tareas</h1>
         <ToDoList />
       </main>
 

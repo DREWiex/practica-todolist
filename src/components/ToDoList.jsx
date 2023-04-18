@@ -1,3 +1,4 @@
+import { Form } from "./Form";
 
 export const ToDoList = () => {
 
@@ -6,7 +7,7 @@ export const ToDoList = () => {
   return (
 
     <>
-    
+      <Form />
 
 
     </>
