@@ -6,7 +6,7 @@ import { setLocal, getLocal } from '../helpers/localStorage';
 
 export const ToDoList = () => {
 
-  const [tasks, dispatch] = useReducer(reducerTask, []);
+  const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
 
   const onNewTask = (newTask) => {
 

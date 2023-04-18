@@ -1,9 +1,6 @@
 import { Table } from "./Table";
-import { getLocal } from "../helpers/localStorage";
 
 export const Tareas = ({ tasks }) => {
-
-  console.log(getLocal());
 
   return (
 
