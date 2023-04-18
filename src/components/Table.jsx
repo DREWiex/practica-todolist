@@ -2,7 +2,7 @@ import { useTodoList } from "../hooks/useToDoList";
 
 export const Table = ({ id, newTask, description, done }) => {
 
-    const { handleToggleTask } = useTodoList('');
+    const { handleToggleTask } = useTodoList();
 
     return (
 
@@ -23,5 +23,3 @@ export const Table = ({ id, newTask, description, done }) => {
     );
 
 };
-
-//! falta evento onClick en button

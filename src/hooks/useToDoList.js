@@ -1,9 +1,10 @@
 import { useReducer } from "react";
 import { reducerTask } from '../reducers/taskReducer';
+import { getLocal } from '../helpers/localStorage';
 
 export const useTodoList = () => {
 
-  const [tasks, dispatch] = useReducer(reducerTask, []);
+  const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
 
 
   const handleNewTask = (newTask) => {
@@ -19,18 +20,25 @@ export const useTodoList = () => {
      
   };
 
+
   const handleDeleteTask = (id) => {
     
-  }
+
+
+  };
+
 
   const handleToggleTask = (id) => {
 
-    console.log('Hola');
+
      
-  }
+  };
 
 
   return {
+    tasks,
+    handleNewTask,
+    handleDeleteTask,
     handleToggleTask
   };
 

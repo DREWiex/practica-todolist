@@ -1,6 +1,6 @@
 import { useForm } from "../hooks/useForm";
 
-export const Form = ({ onNewTask }) => {
+export const Form = ({ handleNewTask }) => {
 
     const { handleChange } = useForm('');
 
@@ -16,7 +16,7 @@ export const Form = ({ onNewTask }) => {
             date: new Date()
         };
 
-        onNewTask(newTask);
+        handleNewTask(newTask);
 
     };
 
