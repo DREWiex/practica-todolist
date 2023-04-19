@@ -1,7 +1,7 @@
 
+export const Table = (task) => {
 
-export const Table = ({ id, newTask, description, done, handleDeleteTask, handleToggleTask}) => {
-
+    const { id, newTask, description, done, handleDeleteTask, handleToggleTask } = task;
 
     return (
 
@@ -9,11 +9,12 @@ export const Table = ({ id, newTask, description, done, handleDeleteTask, handle
         
             <tr>
                 <td>
+
                     <div className={done ? 'opacity line-through' : ''}>
                         <strong>{newTask}</strong> - {description}
                     </div>
+
                     <div>
-                    
                         <button
                             id={id}
                             className={!done && 'pendiente' || done && 'finalizada'}
@@ -24,8 +25,8 @@ export const Table = ({ id, newTask, description, done, handleDeleteTask, handle
                           className="eliminar"
                           onClick={()=>{handleDeleteTask(id)}}
                           >Eliminar</button>
-                        
                     </div>
+
                 </td>
             </tr>
 
