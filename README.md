@@ -18,7 +18,7 @@ Pasos para iniciar la aplicación desde la terminal:
 git clone https://github.com/DREWiex/practica-todolist.git
 ~~~
 
-2. Instalar módulos:
+2. Instalar las extensiones necesarias:
 
 ~~~
 yarn
