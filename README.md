@@ -4,6 +4,8 @@
 
 En esta práctica hemos desarrollado una aplicación que permite añadir y eliminar tareas a través de un formulario, además de marcarla como finalizada si así lo decidiera el usuario.
 
+La versión 1.0.0 ha sido desplegada en Netlify: https://proyecto-todolist-fbw.netlify.app/
+
 ---
 
 ## Inicialización
