@@ -8,16 +8,18 @@ export const Table = ({ id, newTask, description, done, handleToggleTask }) => {
 
             <tr>
                 <td>
-                    <strong>{newTask}</strong>
-                    -
-                    {description}
-                    <button
-                        id={id}
-                        onClick={() => { handleToggleTask(id) }}
-                    >
-                        {!done && 'Pendiente' || done && 'Finalizada'}
-                    </button>
-                    <button id={id}>Eliminar</button>
+                    <div>
+                        <strong>{newTask}</strong> - {description}
+                    </div>
+                    <div>
+                        <button
+                            id={id}
+                            onClick={() => { handleToggleTask(id) }}
+                        >
+                            {!done && 'Pendiente' || done && 'Finalizada'}
+                        </button>
+                        <button id={id}>Eliminar</button>
+                    </div>
                 </td>
             </tr>
 

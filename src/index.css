@@ -47,6 +47,19 @@ input[type="submit"]{
     color: var(--white);
 }
 
+td{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 10px;
+    border: 1px solid var(--gray);
+}
+
+td > *{
+    padding: 0 5px;
+}
+
 footer{
     font-size: 1rem;
     padding: 10px;
@@ -59,10 +72,6 @@ footer{
 
 .flex > p{
     align-self: center;
-}
-
-.pb-20{
-    padding-bottom: 20px;
 }
 
 .bg-green{
