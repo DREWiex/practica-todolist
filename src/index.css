@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
+/** STYLE FOR ALL ++++++++++++++++++++++++++++ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
 :root{
     --white: #fff;
     --black: #000;
@@ -9,12 +18,7 @@
     --red: #ee0a1b;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+/* GENERALS ++++++++++++++++++++++++++++ */
 
 header{
     font-size: 2rem;
@@ -79,6 +83,8 @@ footer{
     padding: 10px;
 }
 
+/* RECICLE ++++++++++++++++++++++++++++ */
+
 .flex{
     display: flex;
     flex-direction: column;
@@ -115,3 +121,144 @@ footer{
 .line-through{
     text-decoration: line-through; /* toggle class */
 }
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: column;
+  }
+
+  .margin2topbot {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .centerText {
+    text-align: center;
+  }
+
+/* LOGIN FORM ++++++++++++++++++++++++++++ */
+
+.loginForm {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--darkgreen);
+    box-shadow: 0px 0px 10px var(--lightgreen);
+    margin-bottom: 20px;
+  }
+
+  .decorationOff {
+    text-decoration: none;
+  }
+
+  #logBtn {
+    transition: 0.5s ease-in-out;
+    color: var(--black);
+  }
+
+  #logBtn:hover {
+    background-color: var(--lightgreen);
+    color: var(--white);
+  }
+
+/* NAV BAR ++++++++++++++++++++++++++++ */
+
+  .navBar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    padding: 4px;
+    background-color: var(--lightgreen);
+    color: var(--white)
+  }
+
+  .navBar:hover {
+    color: var(--white);
+  }
+
+  .whiteLetters {
+    color: whitesmoke
+  }
+
+  a {
+    color: var(--black)
+  }
+
+  a:link {
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    }
+
+  a:hover {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+
+/**MEDIA QUERY +++++++++++++++++++ */
+/* ===================================
+                     media query 768px
+======================================*/
+@media screen and (min-width:768px) {
+    .card {
+        display: grid;
+      }
+    
+      .card-image {
+        width: 100%;
+        margin-right: 20px;
+      }
+    
+      .card-title {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+    
+      .card-subtitle {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    
+      .card-text {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+    
+      .card-small-text {
+        width: 100%;
+        text-align: center;
+      }
+}
+
+/*768px end.*/
+
+/* ===================================
+                     media query 992px
+======================================*/
+@media screen and (min-width:992px) {
+
+}
+/*992px end.*/
+
+/* ===================================
+                    media query 1200px
+======================================*/
+@media screen and (min-width:1200px) {
+
+}
+/*1200px end.*/
