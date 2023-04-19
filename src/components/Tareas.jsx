@@ -1,6 +1,7 @@
 import { Table } from "./Table";
 
-export const Tareas = ({tasks, handleDeleteTask }) => {
+export const Tareas = ({ tasks, handleToggleTask, handleDeleteTask}) => {
+
 
   return (
 
@@ -10,17 +11,18 @@ export const Tareas = ({tasks, handleDeleteTask }) => {
 
       <table>
         <tbody>
-          <tr>
 
-            {
+          {
+            tasks.map(task => (
+              <Table
+                {...task}
+                handleToggleTask={handleToggleTask}
+                key={task.id}
+                handleDeleteTask={handleDeleteTask}
+              />
+            ))
+          }
 
-              tasks.map(task => (
-                <Table {...task} key={task.id} handleDeleteTask={handleDeleteTask}/>
-              ))
-
-            }
-
-          </tr>
         </tbody>
       </table>
 

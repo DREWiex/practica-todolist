@@ -4,22 +4,28 @@ import { ToDoList } from "./components/ToDoList";
 function App() {
 
 
-
   return (
 
     <>
 
-      <header>
-        <p>Práctica ToDo List</p>
+      <header className="flex bg-green">
+
+        <p>Práctica TodoList</p>
+
       </header>
 
-      <main>
-        <h1>Lista de Tareas</h1>
+      <main className="flex">
+
+        <h1>Lista de tareas</h1>
+
         <ToDoList />
+
       </main>
 
-      <footer>
-        <p>Práctica ToDo List</p>
+      <footer className="flex bg-green">
+
+        <p>Práctica TodoList</p>
+
       </footer>
 
     </>
@@ -28,4 +34,4 @@ function App() {
 
 };
 
-export default App
+export default App;

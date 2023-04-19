@@ -18,21 +18,24 @@ export const Form = ({ handleNewTask }) => {
 
         handleNewTask(newTask);
 
+        ev.target.newTask.value = '';
+        ev.target.description.value = '';
+
     };
 
 
     return (
         <>
 
-            <h2>Create Task</h2>
+            <h2>Añadir tarea</h2>
 
-            <form action="" onSubmit={handleSubmit}>
+            <form action="" onSubmit={handleSubmit} className="flex">
 
                 <input
                     type="text"
                     id="newTask"
                     name="newTask"
-                    placeholder="Task"
+                    placeholder="Tarea"
                     onChange={handleChange}
                 />
 
@@ -41,13 +44,14 @@ export const Form = ({ handleNewTask }) => {
                     id="description"
                     cols="50"
                     rows="10"
+                    placeholder="Descripción"
                     onChange={handleChange}>
                 </textarea>
 
-                <button
-                    type="submit">
-                    Add Task
-                </button>
+                <input
+                    type="submit"
+                    value="Añadir tarea"
+                />
 
                 {
                     //sent && <p>Formulario enviado </p>

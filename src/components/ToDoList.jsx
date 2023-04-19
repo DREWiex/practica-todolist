@@ -4,15 +4,32 @@ import { useTodoList } from "../hooks/useToDoList";
 
 export const ToDoList = () => {
 
-  const { tasks, handleNewTask, handleDeleteTask } = useTodoList();
+  const {
+    tasks,
+    handleNewTask,
+    handleDeleteTask,
+    handleToggleTask
+  } = useTodoList();
+
 
   return (
 
     <>
+    
+      <section className="flex">
 
-      <Form handleNewTask={handleNewTask}/>
+        <Form handleNewTask={handleNewTask} />
 
-      <Tareas tasks={tasks} handleDeleteTask={handleDeleteTask} />
+      </section>
+
+      <section className="flex">
+
+        <Tareas
+          tasks={tasks}
+          handleToggleTask={handleToggleTask}
+          handleDeleteTask={handleDeleteTask} />
+
+      </section>
 
     </>
 

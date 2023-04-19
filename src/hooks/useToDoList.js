@@ -13,6 +13,13 @@ export const useTodoList = () => {
   }, [tasks]);
 
 
+  useEffect(() => {
+
+    setLocal(tasks);
+
+  }, [tasks]);
+
+
   const handleNewTask = (newTask) => {
 
     const action = {
@@ -43,7 +50,14 @@ export const useTodoList = () => {
 
   const handleToggleTask = (id) => {
 
+    const action = {
 
+      type: '[TASK] toggle task',
+      payload: id
+
+    };
+
+    dispatch(action);
      
   };
 
