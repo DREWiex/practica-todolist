@@ -6,7 +6,13 @@ import { useTodoList } from "../hooks/useToDoList";
 
 export const ToDoList = () => {
 
-  const { tasks, handleNewTask } = useTodoList();
+  const {
+    tasks,
+    handleNewTask,
+    handleDeleteTask,
+    handleToggleTask
+  } = useTodoList();
+
 
   useEffect(() => {
 
@@ -21,7 +27,10 @@ export const ToDoList = () => {
 
       <Form handleNewTask={handleNewTask} />
 
-      <Tareas tasks={tasks} />
+      <Tareas
+        tasks={tasks}
+        handleToggleTask={handleToggleTask}
+      />
 
     </>
 

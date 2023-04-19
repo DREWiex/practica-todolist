@@ -24,7 +24,7 @@ export const Form = ({ handleNewTask }) => {
     return (
         <>
 
-            <h2>Create Task</h2>
+            <h2>Añadir tarea</h2>
 
             <form action="" onSubmit={handleSubmit}>
 
@@ -32,7 +32,7 @@ export const Form = ({ handleNewTask }) => {
                     type="text"
                     id="newTask"
                     name="newTask"
-                    placeholder="Task"
+                    placeholder="Tarea"
                     onChange={handleChange}
                 />
 
@@ -41,6 +41,7 @@ export const Form = ({ handleNewTask }) => {
                     id="description"
                     cols="50"
                     rows="10"
+                    placeholder="Descripción"
                     onChange={handleChange}>
                 </textarea>
 
