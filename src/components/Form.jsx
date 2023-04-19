@@ -18,6 +18,9 @@ export const Form = ({ handleNewTask }) => {
 
         handleNewTask(newTask);
 
+        ev.target.newTask.value = '';
+        ev.target.description.value = '';
+
     };
 
 
