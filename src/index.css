@@ -52,6 +52,10 @@ input[type="submit"]{
     cursor: pointer;
 }
 
+span{
+    margin-bottom: 20px;
+}
+
 table{
     margin-bottom: 40px;
 }
@@ -215,39 +219,8 @@ footer{
                      media query 768px
 ======================================*/
 @media screen and (min-width:768px) {
-    .card {
-        display: grid;
-      }
-    
-      .card-image {
-        width: 100%;
-        margin-right: 20px;
-      }
-    
-      .card-title {
-        width: 100%;
-        margin-bottom: 5px;
-        text-align: center;
-      }
-    
-      .card-subtitle {
-        width: 100%;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-    
-      .card-text {
-        width: 100%;
-        margin-bottom: 5px;
-        text-align: center;
-      }
-    
-      .card-small-text {
-        width: 100%;
-        text-align: center;
-      }
-}
 
+}
 /*768px end.*/
 
 /* ===================================

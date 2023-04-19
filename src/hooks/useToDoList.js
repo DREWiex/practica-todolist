@@ -6,12 +6,6 @@ export const useTodoList = () => {
 
   const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
 
-  useEffect(() => {
-
-    setLocal(tasks);
-
-  }, [tasks]);
-
 
   useEffect(() => {
 
@@ -31,7 +25,7 @@ export const useTodoList = () => {
 
     dispatch(action);
      
-  };
+  }; //!FUNC-HANDLENEWTASK
 
 
   const handleDeleteTask = (id) => {
@@ -46,7 +40,8 @@ export const useTodoList = () => {
 
     dispatch(action)
 
-  }
+  }; //!FUNC-HANDLEDELETETASK
+
 
   const handleToggleTask = (id) => {
 
@@ -59,7 +54,7 @@ export const useTodoList = () => {
 
     dispatch(action);
      
-  };
+  }; //!FUNC-HANDLETOGGLETASK
 
 
   return {
