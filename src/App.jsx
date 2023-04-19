@@ -4,15 +4,14 @@ import { ToDoList } from "./components/ToDoList";
 function App() {
 
 
-
   return (
 
     <>
 
-      <header>
+      <header className="flex bg-green">
 
         <p>Práctica TodoList</p>
-        
+
       </header>
 
       <main className="flex">
@@ -23,7 +22,7 @@ function App() {
 
       </main>
 
-      <footer>
+      <footer className="flex bg-green">
 
         <p>Práctica TodoList</p>
 

@@ -2,5 +2,70 @@
 
 :root{
     --white: #fff;
-    
+    --black: #000;
+    --gray: #e0e0e0;
+    --lightgreen: #539525;
+    --darkgreen: #3f6825;
+    --red: #ee0a1b;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    font-size: 2rem;
+    padding: 30px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    align-self: center;
+    margin: 20px;
+}
+
+h2{
+    padding-bottom: 10px;
+}
+
+form > *{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    background-color: var(--darkgreen);
+    color: var(--white);
+}
+
+footer{
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex > p{
+    align-self: center;
+}
+
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.bg-green{
+    background-color: var(--lightgreen);
+    color: var(--white);
 }
