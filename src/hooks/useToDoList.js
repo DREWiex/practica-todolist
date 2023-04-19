@@ -1,10 +1,16 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { reducerTask } from '../reducers/taskReducer';
-import { getLocal } from '../helpers/localStorage';
+import { getLocal, setLocal } from '../helpers/localStorage';
 
 export const useTodoList = () => {
 
   const [tasks, dispatch] = useReducer(reducerTask, [], getLocal);
+
+  useEffect(() => {
+
+    setLocal(tasks);
+
+  }, [tasks]);
 
 
   const handleNewTask = (newTask) => {
@@ -34,7 +40,6 @@ export const useTodoList = () => {
     dispatch(action)
 
   }
-
 
   const handleToggleTask = (id) => {
 

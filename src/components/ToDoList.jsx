@@ -1,19 +1,10 @@
-import { useEffect } from "react";
 import { Form } from "./Form";
 import { Tareas } from "./Tareas";
-import { setLocal } from '../helpers/localStorage';
 import { useTodoList } from "../hooks/useToDoList";
 
 export const ToDoList = () => {
 
-  const { tasks, handleNewTask } = useTodoList();
-
-  useEffect(() => {
-
-    setLocal(tasks);
-
-  }, [tasks]);
-
+  const { tasks, handleNewTask, handleDeleteTask } = useTodoList();
 
   return (
 
@@ -21,7 +12,7 @@ export const ToDoList = () => {
 
       <Form handleNewTask={handleNewTask}/>
 
-      <Tareas tasks={tasks} />
+      <Tareas tasks={tasks} handleDeleteTask={handleDeleteTask} />
 
     </>
 
