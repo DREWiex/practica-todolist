@@ -6,7 +6,9 @@ export const reducerTask = (state = [], action) => {
             return [...state, action.payload];
 
         case '[TASK] delete task':
-            return console.log('Delete task');
+            console.log('estamos en delete y este es el id', action.payload)
+            const comparison = state.filter(task => task.id !== action.payload);
+            return comparison
 
         case '[TASK] toggle task':
             let task = state.find(item => item.id == action.payload);
