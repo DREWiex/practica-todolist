@@ -32,7 +32,7 @@ h1{
 }
 
 h2{
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
 form > *{
@@ -45,6 +45,11 @@ form > *{
 input[type="submit"]{
     background-color: var(--darkgreen);
     color: var(--white);
+    cursor: pointer;
+}
+
+table{
+    margin-bottom: 40px;
 }
 
 td{
@@ -52,12 +57,21 @@ td{
     align-items: center;
     justify-content: space-between;
     font-size: 0.8rem;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid var(--gray);
+    border-radius: 5px;
 }
 
 td > *{
     padding: 0 5px;
+}
+
+button{
+    padding: 8px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer{
@@ -77,4 +91,27 @@ footer{
 .bg-green{
     background-color: var(--lightgreen);
     color: var(--white);
+}
+
+.pendiente{
+    background-color: var(--darkgreen);
+    color: var(--white);
+}
+
+.eliminar{
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.finalizada{
+    color: var(--white);
+    background-color: var(--black); /* toggle class */
+}
+
+.opacity{
+    opacity: 0.3; /* toggle class */
+}
+
+.line-through{
+    text-decoration: line-through; /* toggle class */
 }
