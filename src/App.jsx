@@ -10,16 +10,16 @@ function App() {
     <>
 
       <header>
-        <p>Práctica ToDo List</p>
+        <p>Práctica TodoList</p>
       </header>
 
       <main>
-        <h1>Lista de Tareas</h1>
+        <h1>Lista de tareas</h1>
         <ToDoList />
       </main>
 
       <footer>
-        <p>Práctica ToDo List</p>
+        <p>Práctica TodoList</p>
       </footer>
 
     </>
