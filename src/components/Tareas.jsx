@@ -1,7 +1,6 @@
 import { Table } from "./Table";
 
-export const Tareas = ({ tasks, handleDeleteTask, handleToggleTask}) => {
-
+export const Tareas = ({ tasks, handleDeleteTask, handleToggleTask }) => {
 
   return (
 
@@ -9,21 +8,23 @@ export const Tareas = ({ tasks, handleDeleteTask, handleToggleTask}) => {
 
       <h2>Tareas</h2>
 
-      <table>
-        <tbody>
+      {!tasks[0] ? <span className="margin2topbot">Actualmente no hay tareas que mostrar.</span> :
+        <table>
+          <tbody>
 
-          {
-            tasks.map(task => (
-              <Table
-                {...task}
-                handleDeleteTask={handleDeleteTask}
-                handleToggleTask={handleToggleTask}
-                key={task.id} />
-            ))
-          }
+            {
+              tasks.map(task => (
+                <Table
+                  {...task}
+                  handleDeleteTask={handleDeleteTask}
+                  handleToggleTask={handleToggleTask}
+                  key={task.id} />
+              ))
+            }
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      }
 
     </>
 

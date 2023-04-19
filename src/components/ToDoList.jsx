@@ -15,6 +15,8 @@ export const ToDoList = () => {
   return (
 
     <>
+
+      <h1>Lista de tareas</h1>
     
       <section className="flex">
 
