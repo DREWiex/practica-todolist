@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { Form } from "./Form";
 import { Tareas } from "./Tareas";
-import { setLocal } from '../helpers/localStorage';
 import { useTodoList } from "../hooks/useToDoList";
 
 export const ToDoList = () => {
@@ -14,23 +12,24 @@ export const ToDoList = () => {
   } = useTodoList();
 
 
-  useEffect(() => {
-
-    setLocal(tasks);
-
-  }, [tasks]);
-
-
   return (
 
     <>
+    
+      <section className="flex">
 
-      <Form handleNewTask={handleNewTask} />
+        <Form handleNewTask={handleNewTask} />
 
-      <Tareas
-        tasks={tasks}
-        handleToggleTask={handleToggleTask}
-      />
+      </section>
+
+      <section className="flex">
+
+        <Tareas
+          tasks={tasks}
+          handleToggleTask={handleToggleTask}
+        />
+
+      </section>
 
     </>
 
