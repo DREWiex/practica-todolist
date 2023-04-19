@@ -48,6 +48,10 @@ input[type="submit"]{
     cursor: pointer;
 }
 
+span{
+    margin-bottom: 20px;
+}
+
 table{
     margin-bottom: 40px;
 }

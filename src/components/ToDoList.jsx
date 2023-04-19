@@ -26,8 +26,8 @@ export const ToDoList = () => {
 
         <Tareas
           tasks={tasks}
-          handleToggleTask={handleToggleTask}
-          handleDeleteTask={handleDeleteTask} />
+          handleDeleteTask={handleDeleteTask}
+          handleToggleTask={handleToggleTask} />
 
       </section>
 
