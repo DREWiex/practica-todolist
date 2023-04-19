@@ -2,7 +2,7 @@
 
 #### Autores: *Kevin Escobar y Andrés León*
 
-En esta práctica hemos desarrollado una aplicación que permite añadir y eliminar tareas a través de un formulario, además de marcarla como finalizada si así lo decidiera el usuario.
+En esta práctica hemos desarrollado una aplicación que permite añadir y eliminar tareas a través de un formulario, además de marcarla como finalizada si así lo decidiera el usuario. Dichas tareas son guardadas en el localStorage, de forma que la persona que las cree siempre tenga acceso a ellas aunque cierre el navegador.
 
 La versión 1.0.0 ha sido desplegada en Netlify: https://proyecto-todolist-fbw.netlify.app/
 
